@@ -20,10 +20,10 @@ class Decorator_Loader
 
 	/**
 	 * Public method to get mapped decorators
-	 * @param $decoratable pass the class name of controller
+	 * @param CI_Controller $decoratable pass the class name of controller
 	 */
-	public static function getDecorators( $decoratable ) {
-		return self::$decorators[$decoratable];
+	public static function getDecorators( CI_Controller $decoratable ) {
+		return self::$decorators[get_class($decoratable)];
 	}
 
 	/**
@@ -49,7 +49,7 @@ class Decorator_Loader
 		$DI = null;
 		
 		// Bypass this function if class has no decorator(s)
-		if(!$decorators = Decorator_Loader::getDecorators(get_class($CI)))
+		if(!$decorators = Decorator_Loader::getDecorators($CI))
 			return;
 		// Iterate through the decorators
 		foreach ($decorators as $decorator) {
