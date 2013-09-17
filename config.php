@@ -15,5 +15,6 @@ define('DECORATORPATH', 'decorators');
  * Method to map controller to decorator. The order of mapping is from top to bottom
  */
 function decorator_config() {
-	// Decorator_Loader::map('Welcome','Test_Decorator');
+	Decorator_Loader::map('Welcome','Test_Decorator');
+	Decorator_Loader::map('Welcome','TestTwo_Decorator');
 }

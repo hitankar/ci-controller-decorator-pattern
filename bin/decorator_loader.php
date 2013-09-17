@@ -44,7 +44,7 @@ class Decorator_Loader
 	/**
 	 * Load decorator objects at runtime.
 	 */
-	function controller_init() {
+	public function controller_init() {
 		global $RTR; global $CI; 
 		$DI = null;
 		

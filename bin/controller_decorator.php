@@ -14,9 +14,9 @@ abstract class Controller_Decorator extends CI_Controller {
 	protected $_decorated;
 
 	/**
-	 * @param Controller_Decorator $decorated Pass the object to decorate
+	 * @param CI_Controller $decoratable Pass the object to decorate
 	 */
-	public function __construct(Controller_Decorator $decoratable) {
+	public function __construct(CI_Controller $decoratable) {
 		$this->_decorated = $decoratable;
 	}
 
